@@ -1,13 +1,162 @@
-html {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
   background-image: linear-gradient(
     to bottom,
     hsl(273, 75%, 66%),
     hsl(240, 73%, 65%)
   );
-  height: 100%;
+  background-attachment: fixed;
+
+  justify-content: center;
+  align-items: center;
+  font-family: "Kumbh Sans";
+  font-size: 12px;
 }
 
-body {
+.container {
+  display: flex;
+
+  width: 950px;
+  height: 500px;
+  background-color: white;
+  border-radius: 25px;
+}
+
+.content {
+  display: flex;
+}
+
+.FAQ {
+  height: 400px;
+  width: 380px;
+  padding-top: 50px;
+}
+
+/* .parents {
+  
+  width: 65%;
+  height: 60%;
+} */
+
+.Answer {
+  display: block;
+}
+
+.accordion-item {
+  padding-top: 40px;
+  border-bottom: 1px solid grey;
+}
+
+.woman-online {
+  height: 500px;
+  width: 500px;
   background-image: url("images/bg-pattern-desktop.svg");
-  border: 5px red;
+  background-size: 450px 480px;
+  background-repeat: no-repeat;
+  background-position: -50px 0px;
+  overflow: hidden;
+}
+
+#wm {
+  position: relative;
+  left: -50px;
+  top: 60px;
+  height: 350px;
+  width: 450px;
+}
+#bx {
+  height: 200px;
+  width: 200px;
+}
+#wm-mobile {
+  display: none;
+}
+
+.box {
+  height: 200px;
+  width: 200px;
+  left: 200px;
+  top: 290px;
+  z-index: 999;
+}
+.content,
+.box {
+  position: absolute;
+}
+
+.Answer {
+  display: none;
+  padding-top: 20px;
+}
+
+.Question > img {
+  position: absolute;
+  left: 850px;
+}
+
+.Question:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 420px) {
+  .container {
+    display: flex;
+    margin-top: 110px;
+    width: 300px;
+    height: 500px;
+    background-color: white;
+    border-radius: 25px;
+  }
+
+  #bx {
+    display: none;
+    
+  }
+  .box{
+    height: 0;
+  }
+  #wm-mobile {
+    display: block;
+    position: relative;
+    top: -120px;
+  }
+  #wm {
+    display: none;
+  }
+
+  .woman-online {
+    height: 125px;
+    width: 300px;
+    background-image: url("images/bg-pattern-desktop.svg");
+    background-size: 260px 260px;
+    background-repeat: no-repeat;
+    background-position: 10px -150px;
+    overflow: visible;
+  }
+
+  .content {
+    display: block;
+  }
+
+  .FAQ {
+    height: 360px;
+    width: 280px;
+    padding-top: 0px;
+    padding-left: 20px;
+  }
+  .Question > img {
+    position: absolute;
+    left: 250px;
+  }
+  h1 {
+    text-align: center;
+  }
 }

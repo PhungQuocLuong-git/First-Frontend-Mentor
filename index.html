@@ -1,80 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Frontend Mentor | FAQ Accordion Card</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
-  </head>
-  <body>
-    <div class="content">
-      <div class="FAQ">
-        <div class="accordion-item">
-          <div class="Question">How many team members can I invite?</div>
-          <div class="Answer">
-            You can invite up to 2 additional users on the Free plan. There is
-            no limit on team members for the Premium plan.
-          </div>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link href='https://fonts.googleapis.com/css?family=Kumbh Sans' rel='stylesheet'>
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+ 
+    <div class="container">
+
+      <div class="box">
+        <img src="/images/illustration-box-desktop.svg" id="bx" alt="box" >
+      </div>
+      <div class="content">
+        <div class="woman-online">
+          <img src="/images/illustration-woman-online-desktop.svg" id="wm" alt="woman-online" >
+          <img src="/images/illustration-woman-online-mobile.svg" id="wm-mobile" alt="woman-mobile">
         </div>
 
-        <div class="accordion-item">
-          <div class="Question">What is the maximum file upload size?</div>
-          <div class="Answer">
-            No more than 2GB. All files in your account must fit your allotted
-            storage space.
+        <div class="FAQ">
+          <h1>FAQ</h1>
+          <div class="accordion-item">
+            <div class="Question" id="1" onclick="myfunction(this)" >
+              How many team members can I invite?
+              <img class="down-arrow" src="./images/icon-arrow-down.svg" alt="Arrow Down" style="cursor:pointer;">
+            </div>
+            <div class="Answer" id="a1">
+              You can invite up to 2 additional users on the Free plan. There is
+              no limit on team members for the Premium plan.
+            </div>
           </div>
-        </div>
 
-        <div class="accordion-item">
-          <div class="Question">How do I reset my password?</div>
-          <div class="Answer">
-            Click “Forgot password” from the login page or “Change password”
-            from your profile page. A reset link will be emailed to you.
+          <div class="accordion-item">
+            <div class="Question" id="2" onclick="myfunction(this)" >
+              What is the maximum file upload size?
+              <img class="down-arrow" src="./images/icon-arrow-down.svg" alt="Arrow Down" style="cursor:pointer;">
+            </div>
+            <div class="Answer" id="a2">
+              No more than 2GB. All files in your account must fit your allotted
+              storage space.
+            </div>
           </div>
-        </div>
 
-        <div class="accordion-item">
-          <div class="Question">Can I cancel my subscription?</div>
-          <div class="Answer">
-            Yes! Send us a message and we’ll process your request no questions
-            asked.
+          <div class="accordion-item" >
+            <div class="Question" id="5" onclick="myfunction(this)" >
+               How do I reset my password?
+              <img class="down-arrow" src="./images/icon-arrow-down.svg" alt="Arrow Down" style="cursor:pointer;">
+            </div>
+            <div class="Answer" id="a5">
+              Click “Forgot password” from the login page or “Change password”
+              from your profile page. A reset link will be emailed to you.
+            </div>
           </div>
-        </div>
 
-        <div class="accordion-item">
-          <div class="Question">Do you provide additional support?</div>
-          <div class="Answer">
-            Chat and email support is available 24/7. Phone lines are open
-            during normal business hours.
+          <div class="accordion-item">
+            <div class="Question" id="3" onclick="myfunction(this)" >
+              Can I cancel my subscription?
+              <img class="down-arrow" src="./images/icon-arrow-down.svg" alt="Arrow Down" style="cursor:pointer;">
+            </div>
+            <div class="Answer" id="a3">
+              Yes! Send us a message and we’ll process your request no questions
+              asked.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="Question" id="4" onclick="myfunction(this)" >
+              Do you provide additional support?
+              <img class="down-arrow" src="./images/icon-arrow-down.svg" alt="Arrow Down" style="cursor:pointer;">
+            </div>
+            <div class="Answer" id="a4">
+              Chat and email support is available 24/7. Phone lines are open
+              during normal business hours.
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="attribution">
+    
+    <!-- <div class="attribution">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
-  </body>
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by
+      <a href="#">Phung Quoc Luong</a>.
+    </div> -->
+  </div>
+
+  <script>
+    function myfunction(cl) {
+        var id='a'+cl.id;
+        var x = document.getElementById(id);
+        if (x.style.display == "none") {
+          x.style.display = "block";
+        }
+        else {
+          x.style.display = "none";
+        }
+
+      }
+      
+      function myfunction1() {
+          
+          var x = document.getElementById("a1");
+          if (x.style.display == "none") {
+            x.style.display = "block";
+          }
+          else {
+            x.style.display = "none";
+          }
+
+        }
+
+        
+      
+
+
+  </script>
+
+</body>
+
 </html>

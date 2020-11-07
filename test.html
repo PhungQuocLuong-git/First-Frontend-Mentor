@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .clock {
+            height: 350px;
+            width: 350px;
+            border: 3px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+
+        }
+
+        .a {
+            height: 250px;
+            width: 250px;
+            
+       
+        }
+
+        .b {
+            height: 200px;
+            width: 200px;
+           
+
+        }
+
+        .c {
+            height: 180px;
+            width: 180px;
+            display: flex;
+        }
+
+        .a,
+        .b,
+        .c {
+            border: 3px solid blue;
+            position: absolute;
+        }
+
+        .d,
+        .e {
+            height: 90px;
+            width: 90px;
+            border: 3px solid yellow;
+        }
+
+        .women{
+            border: 3px solid crimson;
+            left: 25px;
+            
+            height: 200px;
+            width: 300px;
+            overflow: hidden;
+            background-image: url(/images/bg-pattern-desktop.svg) ;
+            background-size: 250px 250px;
+            background-repeat: no-repeat;
+            background-position: -10px 10px;
+
+            
+        }
+        #wm{
+            left: -50px;
+            position: relative;
+        }
+
+        #cont{
+            display: none;
+        }
+      
+        
+
+    </style>
+</head>
+
+
+<body>
+    <div class="clock">
+        <div class="a">
+            <img src="/images/illustration-box-desktop.svg" >
+        </div>
+        <div class="b">sf</div>
+        <div class="c">
+            <div class="d"></div>
+            <div class="e"></div>
+        </div>
+    </div>
+    <div class="women">
+      <img src="/images/illustration-woman-online-desktop.svg" alt="">
+    </div>
+
+   <button class="togle" id="1" onclick="function1(this)">on click</button>
+   <div id="cont" >noi dung an</div>
+    
+    <script>
+        const function1=cl=>{
+            if(cl.id=="1")
+            {
+                var id = "cont";          
+            }
+
+            
+            var x=document.getElementById(id);
+            if(x.style.display==="none")
+            {
+                x.style.display="block";
+               
+            }
+            else
+            {
+                x.style.display="none";
+                
+            }
+         
+           
+        }
+    </script>
+</body>
+
+</html>
